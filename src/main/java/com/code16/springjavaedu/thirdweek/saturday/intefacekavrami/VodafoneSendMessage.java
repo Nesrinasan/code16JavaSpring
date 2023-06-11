@@ -1,4 +1,4 @@
-package com.code16.springjavaedu.secondweek.saturday.oop.intefacekavrami;
+package com.code16.springjavaedu.thirdweek.saturday.intefacekavrami;
 
 public class VodafoneSendMessage implements ISendMessage{
     @Override

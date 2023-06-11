@@ -17,7 +17,7 @@ public class Client {
         maasHesaplamaService.maasHesapla(manager, 5);
 
 
-        Muhasebe muhasebe = new Muhasebe();
+        Employee muhasebe = new Muhasebe();
         muhasebe.setAdi("Meral");
         maasHesaplamaService.maasHesapla(muhasebe, 8);
 

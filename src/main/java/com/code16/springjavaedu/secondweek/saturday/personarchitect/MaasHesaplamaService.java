@@ -1,5 +1,7 @@
 package com.code16.springjavaedu.secondweek.saturday.personarchitect;
 
+import com.code16.springjavaedu.thirdweek.sunday.genelbakis.packageyapisi.controller.AdressController;
+
 public class MaasHesaplamaService {
 
 
@@ -27,5 +29,13 @@ public class MaasHesaplamaService {
 
         employee.maasHesaplama();
     }
+
+//    public void maasHesabiAcma(Employee employee){
+//
+//        employee.maasHesaplama();
+//    }
+
+
+
 
 }

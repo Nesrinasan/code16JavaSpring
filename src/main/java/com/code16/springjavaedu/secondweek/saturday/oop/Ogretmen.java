@@ -16,4 +16,11 @@ public class Ogretmen {
         System.out.println("Öğretmen saat 9 da okula gider.");
     }
 
+    public String getAdi() {
+        return adi;
+    }
+
+    public void setAdi(String adi) {
+        this.adi = adi;
+    }
 }

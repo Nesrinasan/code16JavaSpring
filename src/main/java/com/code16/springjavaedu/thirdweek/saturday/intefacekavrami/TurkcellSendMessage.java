@@ -1,4 +1,4 @@
-package com.code16.springjavaedu.secondweek.saturday.oop.intefacekavrami;
+package com.code16.springjavaedu.thirdweek.saturday.intefacekavrami;
 
 public class TurkcellSendMessage implements ISendMessage{
 
@@ -9,7 +9,10 @@ public class TurkcellSendMessage implements ISendMessage{
 
     @Override
     public void sendMessageWithMail() {
+        test();
         System.out.println("Turkcell mail gönderiyor");
 
     }
+
+
 }
