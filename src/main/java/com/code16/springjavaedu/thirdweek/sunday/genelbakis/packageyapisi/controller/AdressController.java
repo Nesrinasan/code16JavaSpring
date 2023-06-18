@@ -3,6 +3,7 @@ package com.code16.springjavaedu.thirdweek.sunday.genelbakis.packageyapisi.contr
 import com.code16.springjavaedu.thirdweek.sunday.genelbakis.packageyapisi.model.student.Student;
 import com.code16.springjavaedu.thirdweek.sunday.genelbakis.packageyapisi.service.StudenttService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

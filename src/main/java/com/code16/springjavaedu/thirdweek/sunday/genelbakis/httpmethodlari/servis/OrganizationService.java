@@ -61,11 +61,11 @@ public class OrganizationService {
 
     public boolean deleteOrganization(int organizationId) {
         List<Organization> organizationList = OrganizationConfiguration.organizationList;
-        for (Organization organization : organizationList) {
-            if (organization.getId() == organizationId) {
-                organizationList.remove(organization);
-            }
-        }
+//        for (Organization organization : organizationList) {
+//            if (organization.getId() == organizationId) {
+//                organizationList.remove(organization);
+//            }
+//        }
         return true;
     }
 }

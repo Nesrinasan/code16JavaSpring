@@ -5,6 +5,7 @@ import com.code16.springjavaedu.thirdweek.sunday.genelbakis.httpmethodlari.model
 import com.code16.springjavaedu.thirdweek.sunday.genelbakis.httpmethodlari.model.OrganizationUpdateRequestDto;
 import com.code16.springjavaedu.thirdweek.sunday.genelbakis.httpmethodlari.servis.OrganizationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -15,7 +16,7 @@ public class OrganizationController {
     OrganizationService organizationService;
 
     @GetMapping("/getOrganization")
-    public Organization getOrganization(@RequestParam(value = "orgId", required = false) int organizationId){
+    public Organization getOrganization(@RequestParam(value = "org_Id", required = false) Integer organizationId){
         return organizationService.getOrganization(organizationId);
 
     }
@@ -33,8 +34,9 @@ public class OrganizationController {
     }
 
     @DeleteMapping("/deleteOrganization")
-    public boolean updateOrganization(@RequestParam int organizationId){
-        return organizationService.deleteOrganization(organizationId);
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void updateOrganization(@RequestParam int organizationId){
+         organizationService.deleteOrganization(organizationId);
 
     }
 
