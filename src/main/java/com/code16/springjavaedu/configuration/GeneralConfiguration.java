@@ -2,15 +2,21 @@ package com.code16.springjavaedu.configuration;
 
 
 import com.code16.springjavaedu.fourthweek.saturday.packagestructure.model.Student;
+//import com.code16.springjavaedu.fourthweek.sunday.restcall.openfeign.FeignCustomError;
+import feign.Logger;
+import feign.codec.ErrorDecoder;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.http.HttpHeaders;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.TransactionManager;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.client.RestTemplate;
 
@@ -49,10 +55,14 @@ public class GeneralConfiguration {
 		return new RestTemplate();
 	}
 
-	@Bean
-	public HttpHeaders httpHeaders() {
-		return new HttpHeaders();
-	}
+//	@Bean
+//	public ErrorDecoder errorDecoder() {
+//		return new FeignCustomError();
+//	}
 
+	@Bean
+	Logger.Level feignLoggerLevel() {
+		return Logger.Level.BASIC;
+	}
 
 }

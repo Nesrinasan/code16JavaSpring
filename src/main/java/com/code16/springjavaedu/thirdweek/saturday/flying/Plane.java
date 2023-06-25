@@ -1,6 +1,5 @@
 package com.code16.springjavaedu.thirdweek.saturday.flying;
 
-import jdk.jshell.spi.ExecutionControl;
 
 public abstract class Plane {
 
