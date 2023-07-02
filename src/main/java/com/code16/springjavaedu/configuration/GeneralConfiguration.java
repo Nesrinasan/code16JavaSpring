@@ -7,6 +7,9 @@ import feign.Logger;
 import feign.codec.ErrorDecoder;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +17,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.http.HttpHeaders;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.TransactionManager;
@@ -26,6 +30,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
+@EnableCaching
+@EnableScheduling
 public class GeneralConfiguration {
 
 	public static List<Student> studentList = new ArrayList<>();
@@ -54,11 +60,6 @@ public class GeneralConfiguration {
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
-
-//	@Bean
-//	public ErrorDecoder errorDecoder() {
-//		return new FeignCustomError();
-//	}
 
 	@Bean
 	Logger.Level feignLoggerLevel() {
